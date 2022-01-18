@@ -18,7 +18,7 @@
 A web application that Displays Information about Movies and TV shows to users. It also enables users to search for movies by their titles and view information on the movie.
 
 ## Design
-![Project Design]('./images/lordarc-design.png')
+![Project Design](./images/lordarc-design.png)
 
 ## Links
 
