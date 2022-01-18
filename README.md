@@ -27,7 +27,7 @@ A web application that Displays Information about Movies and TV shows to users. 
 
 ## Setup/Installation Requirements
 
-- Clone this repository from the url, <https://github.com/otienotimothy/lords-table.git>
+- Clone this repository from the url, <https://github.com/Pascal-Owilly/Movie-App.git>
 - Run index.html file using your preferred browser
 
 
