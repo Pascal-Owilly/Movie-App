@@ -1,0 +1,43 @@
+/* Add Google Font: Oleo Script Swash Caps */
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap");
+
+/* Logo */
+.logo {
+    color: red;
+    width: 15%;
+}
+
+.logo > h1 {
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('../images/rows-red-seats-theater.jpg');
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
+.hero span {
+    display: block;
+}
+
+.hero form {
+    margin-top: 8rem;
+}
+
+.hero form button {
+    background-color: whitesmoke;
+    color: red;
+}
+
+.hero form button:hover {
+    background-color: transparent;
+    color: whitesmoke;
+    border-color: whitesmoke;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+}
