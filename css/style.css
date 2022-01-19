@@ -4,7 +4,7 @@
 /* Logo */
 .logo {
     color: red;
-    width: 15%;
+    width: 25%; 
 }
 
 .logo > h1 {
@@ -26,6 +26,8 @@
     margin-top: 8rem;
 }
 
+
+
 .hero form button {
     background-color: whitesmoke;
     color: red;
@@ -35,6 +37,29 @@
     background-color: transparent;
     color: whitesmoke;
     border-color: whitesmoke;
+}
+
+/* movie section */
+
+.movie-list-container > div {
+   width: 30%;
+   cursor: pointer;
+   transition: transform ease-in;
+   border-radius: 1.5rem;
+}
+
+.movie-list-container > div > img{
+    border-radius: 1.5rem;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.movie-list-container > div:hover{
+    transform: scale(1.05);
+}
+
+.movie-list-container > div:active{
+    transform: scale(.95);
 }
 
 /* Footer */

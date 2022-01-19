@@ -3,7 +3,7 @@
 const API_URL =
 	"https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=6136f29a710a02332f5efbc043ba0720&page=1";
 
-const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
+const IMG_PATH = "https://image.tmdb.org/t/p/w300";
 
 const SEARCH_URL =
 	"https://api.themoviedb.org/3/search/movie?&api_key=6136f29a710a02332f5efbc043ba0720&query=";
@@ -18,9 +18,12 @@ function createMovieItems(data) {
 		const image = document.createElement("img");
 		const text = document.createElement("h2");
 		text.innerHTML = `${movie.title}`;
+        text.classList.add("fs-5","bg-danger","py-1","text-light");
 		image.src = IMG_PATH + movie.poster_path;
+		image.classList.add("w-100")
 		movieCard.appendChild(image);
 		movieCard.appendChild(text);
+		movieCard.classList.add("mb-4")
 		movieContainer.appendChild(movieCard);
 	});
 }
