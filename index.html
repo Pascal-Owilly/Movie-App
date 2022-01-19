@@ -18,25 +18,38 @@
 	<body>
 		<div class="container-fluid">
 			<header>
-				<div class="logo">
+				<div
+					class="logo d-flex flex-column align-items-center justify-content-center mt-1"
+				>
 					<h1>Lord Arc</h1>
 					<p>compare your real life to your reel life</p>
 				</div>
 			</header>
-			<section class="hero">
-				<h1>
-					<span>Unlimited Entertainment, T.V Shows, Movies</span>
-					<span> and More.</span>
-				</h1>
-				<form>
-					<input
-						type="search"
-						name="find"
-						id="find"
-						placeholder="Search your favourite movies and T.V shows..."
-					/>
-					<button>Search</button>
-				</form>
+			<section
+				class="hero d-flex flex-column align-items-center justify-content-center text-light"
+			>
+				<div class="container d-flex flex-column align-items-center">
+					<h1>
+						<span>Unlimited Entertainment, T.V Shows, Movies</span>
+						<span> and More.</span>
+					</h1>
+					<form class="w-50 d-flex flex-column">
+						<div class="mb-3">
+							<input
+								type="search"
+								name="find"
+								id="find"
+								placeholder="Search your favourite movies and T.V shows..."
+								class="form-control d-block py-2 ps-4 rounded-pill mb-3 fs-4"
+							/>
+						</div>
+						<div class="mb-3 align-self-center">
+							<button class="d-block btn btn-lg rounded-pill px-5 py-2 fs-5">
+								Search
+							</button>
+						</div>
+					</form>
+				</div>
 			</section>
 			<section class="preview">
 				<h2>Preview</h2>
