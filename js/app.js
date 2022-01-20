@@ -63,7 +63,7 @@ function displayModal(movie) {
 /**Fetch Video from Youtube */
 async function getTrailer(title) {
   const BASE_URL = "https://www.googleapis.com/youtube/v3/search";
-  const API_KEY = "AIzaSyCFiCTTSCs2HcLtUWFHd-Wif7wh7EwpLFc";
+  const API_KEY = "AIzaSyAfnAMxS4BW62z0PF6EUJrw_WxuQ7uvj_w";
   let searchUrl = `${BASE_URL}?key=${API_KEY}&type=video&part=snippet&q=${title}`;
   let res = await fetch(searchUrl);
   let data = await res.json();
