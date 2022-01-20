@@ -21,134 +21,42 @@ function createMovieItems(data) {
 		const movieCard = document.createElement("div");
 		const image = document.createElement("img");
 		const text = document.createElement("h2");
-		const btn = document.createElement("BUTTON");
-		btn.id = "someId";
-		btn.setAttribute("data-bs-toggle", "modal");
-		btn.setAttribute("data-bs-target", "#myModal");
-		// $(btn).modal();
-		btn.innerHTML = "View Movie"
+		movieCard.setAttribute("data-bs-toggle", "modal")
+		movieCard.setAttribute("data-bs-target", "#myModal")
+		movieCard.addEventListener("click", function () {
+			displayModal(movie)
+		})
 		text.innerHTML = `${movie.title}`;
 		text.classList.add("fs-5", "bg-danger", "py-1", "text-light");
 		image.src = IMG_PATH + movie.poster_path;
 		image.classList.add("w-100")
 		movieCard.appendChild(image);
 		movieCard.appendChild(text);
-		movieCard.appendChild(btn);
+
 		movieCard.classList.add("mb-4")
 		movieContainer.appendChild(movieCard);
-		
-
-		
 
 	});
 
-
 }
 
 
 
-function displayModal(data) {
+function displayModal(movie) {
 
-	data.results.forEach((movie) => {
+	let displayTittle = document.querySelector("#exampleModalLabel")
+	displayTittle.innerHTML = `${movie.title}`
 
-		
-		$("button#someId").click(function () {
+	let displayOverview = document.querySelector(".movie-overview")
+	displayOverview.innerHTML = `${movie.overview}`
 
-			let displayTittle = document.querySelector("#exampleModalLabel")
-			displayTittle.innerHTML = `${movie.title}`
+	let displayRating = document.querySelector(".movie-ratings")
+	displayRating.innerHTML = `Ratings: ${movie.vote_average}`
 
-			let displayOverview = document.querySelector(".movie-overview")
-			displayOverview.innerHTML = `${movie.overview}`
-
-			let displayRating = document.querySelector(".movie-ratings")
-			displayRating.innerHTML = `Ratings: ${movie.vote_average}`
-
-			let displayDate = document.querySelector(".movie-date")
-			displayDate.innerHTML = `Release Date: ${movie.release_date}`
-
-			
-		})
-
-
-	})
+	let displayDate = document.querySelector(".movie-date")
+	displayDate.innerHTML = `Release Date: ${movie.release_date}`
 
 }
-
-
-
-
-// function createModal (){
-// 	const modalOuter = document.createElement('div');
-// 	modalOuter.classList.add("modal fade");
-// 	modalOuter.setAttribute('tabindex', "-1");
-// 	modalOuter.setAttribute('id', 'myModal');
-// 	modalOuter.setAttribute('aria-labelledby', 'exampleModalLabe');
-// 	modalOuter.setAttribute('aria-hidden', 'true');
-	
-	
-	
-// 	const modalInner = document.createElement('div');
-// 	modalInner.classList.add('modal-dialog')
-// 	modalOuter.appendChild(modalInner);
-	
-	
-// 	const modalContent = document.createElement('div');
-// 	modalContent.classList.add('modal-content')
-// 	modalInner.appendChild(modalContent);
-	
-// 	const modalHeading = document.createElement('div');
-// 	modalHeading.classList.add('modal-header')
-// 	modalContent.appendChild(modalHeading);
-	
-// 	const modalHeading5 = document.createElement('h1');
-// 	modalHeading5.classList.add('modal-title')
-// 	modalOuter.setAttribute('id', "exampleModalLabel");
-// 	modalHeading5.innerHTML= `${movie.title}`
-// 	modalHeading.appendChild(modalHeading5);
-	
-// 	const closeButton = document.createElement('button');
-// 	closeButton.classList.add('btn-close');
-// 	closeButton.setAttribute('data-bs-dismiss', "modal");
-// 	closeButton.setAttribute('aria-label', "close");
-// 	modalHeading.appendChild(closeButton);
-	
-	
-// 	const modalBody = document.createElement('div');
-// 	modalBody.classList.add('modal-body')
-// 	modalInner.appendChild(modalBody);
-	
-// 	const modalOverview = document.createElement('p');
-// 	modalOverview.classList.add('movie-overview')
-// 	modalOverview.innerHTML= `${movie.overview}`
-// 	modalBody.appendChild(modalOverview);
-	
-// 	const modalRatings = document.createElement('h4');
-// 	modalRatings.classList.add('movie-ratings')
-// 	modalRatings.innerHTML = `Ratings: ${movie.vote_average}`
-// 	modalBody.appendChild(modalRatings);
-	
-// 	const modalRelease = document.createElement('h4');
-// 	modalRelease.classList.add('movie-date')
-// 	modalRelease.innerHTML = `Release Date: ${movie.release_date}`
-// 	modalBody.appendChild(modalRatings);
-	
-	
-// 	const modalFooter = document.createElement('div');
-// 	modalFooter.classList.add('modal-footer');
-// 	modalInner.appendChild(modalFooter);
-	
-	
-// 	const modalFooterButton = document.createElement('button');
-// 	modalFooterButton.classList.add('btn btn-secondary');
-// 	closeButton.setAttribute('data-bs-dismiss', "modal");
-// 	modalFooter.appendChild(modalFooterButton);
-
-// 	displayModal()
-	
-	
-// }
-
-
 
 
 
@@ -156,12 +64,8 @@ function displayModal(data) {
 async function fetchMovies(url) {
 	let res = await fetch(url);
 	let data = await res.json();
-	console.log(data);
-	
+
 	createMovieItems(data);
-	displayModal(data);
-
-
 }
 
 window.addEventListener("DOMContentLoaded", function () {
