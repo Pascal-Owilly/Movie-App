@@ -54,15 +54,20 @@
     border-bottom-left-radius: 0;
 }
 
-.movie-list-container > div:hover{
+/* .movie-list-container > div:hover{
     transform: scale(1.05);
-}
+} */
 
-.movie-list-container > div:active{
+/* .movie-list-container > div:active{
     transform: scale(.95);
-}
+} */
 
 /* Footer */
 footer {
     background-color: black;
+}
+#modal{
+    background-color:grey;
+    color: #fff;
+    /* display: none; */
 }
