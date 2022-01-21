@@ -38,6 +38,7 @@ A web application that Displays Information about Movies and TV shows to users. 
 - JAVASCRIPT
 - Bootstrap 5
 - JQuery
+- API
 
 ## Support and contact details
 
