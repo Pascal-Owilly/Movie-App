@@ -4,7 +4,7 @@
 /* Logo */
 .logo {
     color: red;
-    width: 25%; 
+    width: 30%; 
 }
 
 .logo > h1 {
@@ -66,8 +66,43 @@
 footer {
     background-color: black;
 }
+
+footer > .logo {
+    width: unset;
+}
+
+.socials > a > img {
+    width: 1.5rem;
+}
+
+/* Modal */
 #modal{
     background-color:grey;
     color: #fff;
     /* display: none; */
+}
+
+@media (max-width:1000px){
+    .logo {
+        width: 45%;
+    }
+}
+
+/* Add Responsiveness for Smaller Screens */
+
+@media (max-width:760px){
+    .logo {
+        width: 100%;
+    }
+
+    .movie-list-container > div {
+        width: 45%;
+    }
+}
+
+
+@media (max-width:550px){
+    .movie-list-container > div {
+        width: 65%;
+    }   
 }
